@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Wedding</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- フェードイン用ヴェール -->
+  <div id="veil" aria-hidden="true"></div>
+
+  <header>
+    <button id="menu-toggle" aria-label="Open Menu">☰</button>
+    <h1>Happy Wedding</h1>
+  </header>
+
+  <!-- サイドメニュー -->
+  <nav id="side-menu" class="side-menu" aria-label="Main menu">
+    <button id="close-menu" aria-label="Close Menu">×</button>
+    <ul>
+      <li><a href="#intro" data-target="intro">Home</a></li>
+      <li><a href="#messages" data-target="messages">Message</a></li>
+      <li><a href="#gallery" data-target="gallery">Gallery</a></li>
+      <li><a href="#rsvp" data-target="rsvp">With Love</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ホーム：写真＋2ボタン -->
+    <section id="intro" class="section section-hero active">
+      <div class="hero-inner">
+        <img src="images/着物.jpg" alt="Happy Wedding" class="hero-image" />
+        <div class="hero-actions">
+          <a id="hero-message-btn" class="btn btn-primary" href="#messages" data-target="messages">Message</a>
+          <a id="hero-gallery-btn" class="btn btn-outline" href="#gallery" data-target="gallery">Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 友人からのメッセージ -->
+    <section id="messages" class="section">
+      <h2>友人からのメッセージ</h2>
+
+      <div class="tabs" role="tablist" aria-label="メッセージ分類">
+        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="msg-overview" id="tab-overview">概要</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="msg-groom" id="tab-groom">新郎友人より</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="msg-bride" id="tab-bride">新婦友人より</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="msg-overview" role="tabpanel" aria-labelledby="tab-overview">
+          <p>
+            このページでは、新郎・新婦それぞれのご友人から頂いたメッセージを掲載しています。<br/>
+            お祝いの言葉や思い出のエピソードを、ぜひゆっくりご覧ください。
+          </p>
+        </div>
+
+        <div class="tab-panel" id="msg-groom" role="tabpanel" aria-labelledby="tab-groom">
+          <ul class="message-list">
+            <li><strong>スキー部後輩　中村</strong><br/> 
+              結婚おめでとうございます！<br>
+              スキー同好会の時、小西先輩はよく理由をつけて外での運動をサボっているイメージでした。<br>
+              なのでこの前フリスビーを投げた時、意外と運動できるんだと驚かされました！11年越しの発見です笑<br>
+              あと奥さんめちゃくちゃかわいいですね！！<br>
+              これからもスキー同好会の集まりの時は奥さん連れてきてください！！<br>
+            </li>
+            <li><strong>スキー部後輩　足利</strong><br/> 
+              結婚おめでとうございます！<br>
+              高校時代からお世話になっていましたが、自分達高入生と比べ非常に派手であり華やかなライフスタイルを送っていたのが印象的でした笑<br>
+              結婚後の生活も家庭とその周りにも笑顔を与えるような存在であってください♪<br>
+              改めて結婚おめでとうございます！末永くお幸せに！<br>
+            </li>
+            <li><strong>小野</strong><br/>
+              この度はご結婚おめでとうございます。<br>
+              ここではいつも通り「小西」と呼ばせていただきます。<br>
+              正直なところあの小西がついに結婚するという事実にまだ実感が湧いていません。<br>
+              <br>
+              小西とは中学１年の頃からの友人ですが最初はそこまで明るい印象はありませんでした。<br>
+              しかしどんどん社交的に変化していき、高校の頃には誰とでも親しみやすく話しやすい性格になっていました。<br>
+              そして気づけば一緒に馬鹿なことをして笑い合える大切な友人になっていました。<br>
+              <br>
+              卒業後も付き合いは続きお互いに男子校のノリが抜けないまま楽しい時間を過ごしてきました。<br>
+              このままずっと男同士でワイワイやっていくのだろうと勝手に思っていたので結婚の知らせを聞いたときは少し寂しくもありました。<br>
+              しかしそれ以上に小西が生涯一緒にいたいと思う相手と出会えたという事実がとても嬉しかったです。<br>
+              <br>
+              これからは家族を持つ男としてどうか奥様と温かく幸せな家庭を築いてください。<br>
+              そしてたまに私と会う時にはまたあの頃のように男子校のノリで馬鹿な話をして笑い合えたら嬉しいです。<br>
+              改めましてご結婚おめでとうございます。末永い幸せを心よりお祈りしています。<br>
+            </li>
+            <li><strong>石井</strong><br/>
+              こにしー <br>
+              結婚おめでとう<br>
+              <br>
+              中学の時から・特に高校では皆んなといい関係を築いていて、コミュ力の高さからずっと羨望の眼差しを送ってました<br>
+              スキー同好会に入ってからも真っ先に先輩たちと仲良くなり、顧問とも仲良く(笑)なり…<br>
+              <br>
+              常に「本気で叱られないギリギリのライン」でふざけててそういう線引きとかも上手いなと思ってた。<br>
+              人の顔色とか見るの得意なんかな？しらんけど<br>
+              <br>
+              お二人で揃ってるところ何回か見るけど一緒にいて楽しそうだし、2人とも周りの人を笑顔にさせるようなタイプの2人だと思う。<br>
+              これから笑顔の絶えない生活になると思います<br>
+              <br>
+              あらためて結婚おめでとう、末永くお幸せに！
+            </li>
+            <li><strong>飯島</strong><br/>
+              小西へ<br>
+              普段話さないようなことをダラダラと書いていきたいと思います<br>
+              <br>
+              まずは重ねてになるけど結婚おめでとう<br>
+              もしネキやクミちゃんが一緒に見ているのであれば、本当におめでとうございます<br>
+              小西はなんだかんだしっかりしてるし、結婚することについての驚きは然程なかったかな<br>
+              <br>
+              出会いは中学1年の時なので16年も経つそうです　早いねえ<br>
+              <br>
+              出会った頃のイメージはマセガキって感じだったかな<br>
+              だからこそ、別のクラスになった後、毎回俺のクラスのホームルームが終わるのを待って一緒に帰ろうと誘ってくれたのは正直意外でした<br>
+              でも、劉備もビックリの忍耐力が俺らの今の関係を作ってくれていると思ってるので、心から感謝しています<br>
+              <br>
+              学校帰りに立ち寄った歌うんだ村、BOOKOFF、バーガーキングは今でも思い出の場所です<br>
+              <br>
+              中高・大学・社会人と環境が変わっても通勤・通学の方面が一緒だったり、職場が近かったのは運命的なものを感じていました<br>
+              リサさんのようなエッチなお姉さんであればとっくに恋に落ちていたことでしょう<br>  
+              <br>
+              小西にはいくら感謝しても仕切れないぐらい感謝をしてますが、その中でも特に感謝しているものをいくつか<br>
+              <br>
+              まず、俺の世界を広げてくれたこと<br>
+              俺は元来臆病な人間なので、何かを踏みこむことへのハードルが高い人間でした<br>
+              一方で、小西はいろんなことに興味を持ち、その面白さを布教してくれたからこそ、<br>
+              俺もたくさんの体験ができたし、知るはずのなかったことも知ることができました（サドンアタックとかね）<br>
+              いつも何かをする時、こちらを巻き込む形で声をかけてくれること、本当にありがたく思っています<br>
+              <br>
+              次に何があっても味方でいてくれたこと<br>
+              今から2.3年前かな　当時付き合っていた彼女と別れ、精神的に参ってしまい人間関係をリセットしたことがありました<br>
+              当時の俺は、全ての人間を敵だと決めつけ、自己防衛（ツイッターを消し、ラインも適当に返したり）するしかない弱い人間でした<br>
+              <br>
+              そこから1年ぐらいが経って気持ちも落ち着いてきたところで、友人各位への罪悪感が芽生え、本当に関係を続けたい友人には経緯を説明して謝ることにしました<br>
+              経緯を知らない人間からすると突然の謝罪は訳のわからないものだったことでしょう<br>
+              それでも、そこで受け入れてくれたからこそ今の関係が続いていると思うと感謝しかありません<br>
+              <br>
+              いかんせん不器用な人間なので、心配や迷惑をかけることもあるとは思いますが、これからもどうぞよろしくお願いします<br>
+              <br>
+              お二人の健康と更なる発展を心から願っています<br>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="msg-bride" role="tabpanel" aria-labelledby="tab-bride">
+          <ul class="message-list">
+            <li><strong>野中千聡 様</strong><br/>
+              ご結婚おめでとうございます！<br>
+              これから始まる新しい日々が、お2人の人生の宝物になりますように。末長くお幸せに〜！<br>
+            </li>
+            <li><strong>松永蒼生 様</strong><br/>
+              待鳥、結婚おめでとう！<br>
+              高校の時の可愛くてちょっぴり毒舌で面白い待鳥を思い出して懐かしい気持ちです！これからも末永くお幸せに！<br>
+            </li>
+            <li><strong>山田祐未 様</strong><br/>
+              待鳥、ご結婚おめでとうございます！これからの毎日が幸せで溢れる特別なものになることを願っています。末長くお幸せに！<br>
+              山田祐未<br>
+            </li>
+            <li><strong>堀尾陽菜 様</strong><br/>
+              待鳥結婚おめでとう🤍<br>
+              毎日一緒にいた高一の時が懐かしいね～！<br>
+              高校の時から待鳥の顔が好き❣️本当にかわいー❣️<br>
+              最近はなかなか会えてないけど待鳥が幸せそうで何より♡<br>
+              末長くお幸せに🕊️<br>
+            </li>
+            <li><strong>明石和綺 様</strong><br/>
+              待鳥結婚おめでとう💐<br>
+              高2の時に沖縄に一緒に行ったり、塾で一緒に授業受けたりしてたのが懐かしい！<br>
+              可愛くて大人しく見えるのに話すとめっちゃ面白くて楽しかったのを覚えてます！<br>
+              旦那さんと末長くお幸せにね🫶
+            </li>
+            <li><strong>武田梨歩様</strong><br/>
+              改めましてご結婚おめでとうございます。<br>
+              京葉学院で出会った時はまさかこんなに長く縁が続くと思っていなかったので人生不思議なものだな～と思っています。<br>
+              待鳥がどう思っているか分からないけれど、私は大分待鳥の後を追っていると思います。<br>
+              <br>
+              まふさんを好きになったのもヒプマイを好きになったのも原神を始めたのも全部待鳥からの影響です。（ヒプマイはちょっと熱冷めてきているけど…）<br>
+              一時期はなんでも真似する私のこと鬱陶しく思っているんじゃないかなと心配していたけど、<br>
+              今は好きなもの一緒に楽しめる人がいるのっていいよね！ってくらいまふさんにはのめりこんでいるので<br>
+              「教えてくれてありがとう！」の気持ちに私がなっているので、鬱陶しいと思っていた時期があったとしてもその事実は胸の中に秘めておいてください。<br>
+              (ちなみに今は結婚って...良いかも...ってなってます) <br>
+              <br>
+              待鳥が丈哉ちゃんと付き合った時はびっくりしたけど、インスタで丈哉ちゃんと繋がって話してみて「この人私に負けず劣らず待鳥の事大好きだな」と思って安心しました。<br>
+              この人は待鳥を悲しませるようなことはしないだろうなと。と同時にこの人は私の知らない待鳥を知ることになる訳だなとちょっぴり嫉妬もしました！<br>
+              フリスビーを投げる会で改めて２人の雰囲気を見て、待鳥が丈哉ちゃんのことを大切に思っているのが伝わってきて待鳥はこんな風に人を愛すんだなと思ってちょっと寂しく思ったのは内緒です（私が見たことのない待鳥だったから）。<br>
+              でも顔を見合わせて笑う2人はとてもお似合いで幸せそうで、丈哉ちゃんと笑いあってる待鳥を見ると丈哉ちゃんと出会えて良かったねとも思うのです。<br>
+              これから待鳥と丈哉ちゃん２人の人生、何があるか分からないけれど待鳥と丈哉ちゃんならあまり衝突せず、笑いが多い家庭になると思っています。<br>
+              末永くお幸せに。<br>
+              <br>
+              私ともこの先も末永く付き合っていただけると幸いです。大好きだよ。<br>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ① ギャラリー一覧（写真＋コメント＝ボタン） -->
+    <section id="gallery" class="section">
+      <h2>ギャラリー</h2>
+
+      <ul class="gallery-grid" aria-label="思い出フォトギャラリー">
+        <!-- 1 -->
+        <li class="gallery-card">
+          <a class="gallery-link" href="#album-1" data-target="album-1" role="button" aria-label="アルバム1へ">
+            <figure class="gallery-row">
+              <img src="images/学生①_お疲れ様会.jpg" alt="学生編">
+              <figcaption>学生編</figcaption>
+            </figure>
+          </a>
+        </li>
+        <!-- 2 -->
+        <li class="gallery-card">
+          <a class="gallery-link" href="#album-2" data-target="album-2" role="button" aria-label="アルバム2へ">
+            <figure class="gallery-row">
+              <img src="images/社会人①_結婚.jpg" alt="社会人編">
+              <figcaption>社会人編</figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ② 各アルバム（写真＋見出し＋詳細コメント、縦線区切り） -->
+    <section id="album-1" class="section album-section" aria-labelledby="album-1-title">
+      <div class="album-header">
+        <button class="btn btn-outline back-link" data-target="gallery">← 一覧へ戻る</button>
+        <h2 id="album-1-title">学生編</h2>
+      </div>
+
+      <ul class="album-list">
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/学生②_足立学園.jpg" alt="">
+            <figcaption>
+              <div class="caption-title">足立学園</div>
+              <p class="caption-detail">
+                始まりの場所。小西と同じクラスになったのは中1だけか？<br>
+                学内の思い出はテニス部（笑）とスキー同好会（大笑）あたりかね
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/学生③_夢庵.jpg" alt="">
+            <figcaption>
+              <div class="caption-title">夢庵</div>
+              <p class="caption-detail">
+                学校帰りに立ち寄ったシリーズ　その①<br>
+                今思うと公共の場でとんでもない会話をしたものだ<br>
+                今は別の店が入っててちょっぴり悲しい
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/学生④_土手.jpg" alt="">
+            <figcaption>
+              <div class="caption-title">土手</div>
+              <p class="caption-detail">
+                スキー同好会の活動でよく行ったね<br>
+                意外と書くことなし
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/歌うんだ村.jpg" alt="学生編 写真4（ダミー）">
+            <figcaption>
+              <div class="caption-title">歌うんだ村跡地</div>
+              <p class="caption-detail">
+                学校帰りに立ち寄ったシリーズ　その②<br>
+                中学時代かな？週4,5回通ったね<br>
+                俺の十八番は「U＆I」、小西の十八番は「からくりピエロ」<br>
+                俺の推しは加納さん、小西の推しは三國さん<br>
+                三國さんは松戸駅周辺に住んでたらしく、彼氏と歩いてるのを何度か目撃しました（）
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/バーガーキング跡地.jpg" alt="学生編 写真5（ダミー）">
+            <figcaption>
+              <div class="caption-title">バーガーキング跡地</div>
+              <p class="caption-detail">
+                学校帰りに立ち寄ったシリーズ　その③<br>
+                テスト期間はよく通ったもんだ<br>
+                コメダと迷ったけどこっちをチョイス<br>
+                バーキンもコメダも今は別の建物が入ってて時の流れを感じるねえ
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/玉川学園.jpg" alt="学生編 写真5（ダミー）">
+            <figcaption>
+              <div class="caption-title">玉川学園</div>
+              <p class="caption-detail">
+                試しに行ってみたけどクソ遠いわ　よく通ったね<br>
+                生田よりさらに奥だし、オンボロキャンパスなのかと思ったら、<br>
+                お洒落なキャンパスに噴水まであってたまげた<br>
+                <br>
+                大学時代って何したっけ？　松戸で飲むのがメインだったかな？<br>
+                意外と記憶にないや
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section id="album-2" class="section album-section" aria-labelledby="album-2-title">
+      <div class="album-header">
+        <button class="btn btn-outline back-link" data-target="gallery">← 一覧へ戻る</button>
+        <h2 id="album-2-title">社会人編</h2>
+      </div>
+
+      <ul class="album-list">
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/valo大会.jpg" alt="社会人編 写真1（ダミー）">
+            <figcaption>
+              <div class="caption-title">VCT Tokyo</div>
+              <p class="caption-detail">
+                今見るとよくわからんメンツだな<br>
+                お兄さん最近valoやってますか？　僕はやってません<br>
+                <br>
+                社会人になってから写真全く撮ってなくて横転してます<br>
+                これからは写真を撮ることを意識していきたいと思います
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/誕プレ.jpg" alt="社会人編 写真2（ダミー）">
+            <figcaption>
+              <div class="caption-title">誕プレ</div>
+              <p class="caption-detail">
+                たけだ思い出シリーズその①<br>
+                待鳥が社会人になってからもらった初の誕プレ<br>
+                未だに使ってる
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/つるとんたん.jpg" alt="社会人編 写真3（ダミー）">
+            <figcaption>
+              <div class="caption-title">つるとんたん</div>
+              <p class="caption-detail">
+                たけだ思い出シリーズその②<br>
+                大好きなうどんを食べながら丈哉ちゃんの話を初めて直接聞いた時！
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="album-card">
+          <figure class="album-row">
+            <img src="images/リラックマ.jpg" alt="社会人編 写真4（ダミー）">
+            <figcaption>
+              <div class="caption-title">リラックマ</div>
+              <p class="caption-detail">
+                たけだ思い出シリーズその③<br>
+                リラックマカフェとまふさんのライブは(多分欠かさず)二人で行ってる
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- 最後に -->
+    <section id="rsvp" class="section">
+      <h2>最後に</h2>
+      <p>
+        ここまで見てくれてありがとうございました<br/>
+        <br>
+        一生に一度の機会ということで二人の結婚を少しでも彩れたらという想いで作成しました<br>
+        デザインなんかはからっきしなので拙いものではありますが、<br>
+        少しでも楽しんでくれたのならそれほど嬉しいことはないです<br>
+        <br>
+        今は忙しい時期かと思うので、落ち着いたらまたご飯でも行きましょう<br>
+        最後になりますが、ご結婚本当におめでとうございます
+      </p>
+
+      <h3>スペシャルサンクス</h3>
+      <p>
+        本ページの作成や撮影にご協力くださった皆さまへ、心より感謝申し上げます。<br/>
+        皆さまの御協力の甲斐あって、このページを彩ってくれました。
+
+        <h4>石井</h4>
+        写真撮影協力してくれてありがとう<br>
+        写真を撮る過程で当時のことを思い出すことができたし、<br>
+        撮影した時間自体もまた別の思い出になりました
+        <br>
+        <br>
+        <h4>武田さん</h4>
+        新婦側のメッセージを募ってくれて本当にありがとうございました<br>
+        武田さんの協力がなければここまで良いものはできなかったと思います<br>
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+</body>
+</html>
